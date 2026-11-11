@@ -1,16 +1,18 @@
-import subprocess, sys
-
-try:
-    import requests, urllib3, colorama, tls_client
-except ImportError:
-    print("Gerekli modüller indiriliyor...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "urllib3==1.26.13", "colorama==0.3.9", "requests==2.31.0", "tls_client"])
-finally:
-    import json, random, requests, string, urllib3, tls_client, re, math, uuid
-    from colorama import Fore, Style
-    from time import sleep
-    from os import system
-    from concurrent.futures import ThreadPoolExecutor, wait
+import json
+import random
+import requests
+import string
+import urllib3
+import tls_client
+import re
+import math
+import uuid
+import subprocess
+import sys
+from colorama import Fore, Style
+from time import sleep
+from os import system
+from concurrent.futures import ThreadPoolExecutor, wait
 
 urllib3.disable_warnings()
 MAIL = ''.join(random.choice(string.ascii_lowercase) for _ in range(20)) + "@gmail.com"
